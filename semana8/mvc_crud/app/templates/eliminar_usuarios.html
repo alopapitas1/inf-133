@@ -1,0 +1,25 @@
+<!-- eliminar_usuario.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="subtitle is-2">Eliminar Usuario</h2>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <p><strong>Nombre: {{ user.first_name }}</strong></p>
+                <p><strong>Apellido: {{ user.last_name }}</strong></p>
+                <p><strong>Email: {{ user.e_mail }}</strong></p>
+                <p><strong>Fecha de nacimiento: {{ user.fecha_nacimiento }}</strong></p>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <form method="post" action="{{ url_for('user.eliminar', id=user.id) }}">
+                <button type="submit" class="button is-danger">Confirmar Eliminar</button>
+                <a href="{{ url_for('user.usuarios') }}" class="button">Cancelar</a>
+            </form>
+        </footer>
+    </div>
+</div>
+{% endblock %}
