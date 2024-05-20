@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="subtitle is-2">Editar Libro</h2>
+<form method="post">
+    <div class="field">
+        <label for="marca">marca:</label>
+        <div class="control">
+            <input type="text" id="marca" name="marca" required class="input" value="{{ animal.marca }}">
+        </div>
+    </div>
+    <div class="field">
+        <label for="peso">peso:</label>
+        <div class="control">
+            <input type="float" id="peso" name="peso" required class="input" value="{{ animal.peso }}">
+        </div>
+    </div>
+
+    <div class="field">
+        <label for="sabor">sabor:</label>
+        <div class="control">
+            <input type="text" id="sabor" name="sabor" required class="input" value="{{ animal.sabor }}">
+        </div>
+    </div>
+    <div class="field">
+        <label for="origen">origen:</label>
+        <div class="control">
+            <input type="text" id="origen" name="origen" required class="input" value="{{ animal.origen }}">
+        </div>
+    </div>
+    <input type="submit" value="Guardar Cambios" class="button is-primary">
+</form>
+{% endblock %}
